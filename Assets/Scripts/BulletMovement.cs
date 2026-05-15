@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
     public float speed = 5f;
     public float lifeTime = 5f;
+    public GameObject bulletHitPrefab;
 
     void Start()
     {
@@ -17,6 +19,11 @@ public class BulletMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (bulletHitPrefab != null)
+        {
+            Instantiate(bulletHitPrefab, transform.position, Quaternion.identity);
+        }
+
         Destroy(gameObject);
     }
 }

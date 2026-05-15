@@ -3,6 +3,7 @@ using UnityEngine;
 public class BasicMovement : MonoBehaviour
 {
     public float speed = 60f;
+    public float rotationSpeed = 120f;
 
     public float limitX = 300f;
     public float limitY = 300f;
@@ -28,6 +29,16 @@ public class BasicMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.Rotate(0f, -rotationSpeed * Time.deltaTime, 0f);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.Rotate(0f, rotationSpeed * Time.deltaTime, 0f);
         }
 
         transform.position = new Vector3(

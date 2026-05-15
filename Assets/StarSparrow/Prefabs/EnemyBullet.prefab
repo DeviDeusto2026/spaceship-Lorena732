@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2719956213994927362}
   - component: {fileID: 6121115245035929941}
   - component: {fileID: 4446501694260635562}
-  - component: {fileID: 5122980146421951902}
+  - component: {fileID: 2651157624033848248}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: EnemyBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -137,11 +137,11 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5122980146421951902
+--- !u!114 &2651157624033848248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,9 +150,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2130840648822335303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42459786f80b77b4ba65d5aff9cfbe1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 72c8c60b984489d49aaef92cef50427e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BulletMovement
-  speed: 20
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyBullet
+  speed: 10
   lifeTime: 3
-  bulletHitPrefab: {fileID: 7426652318066165436, guid: c450b2c0cf514bc4783d4e9d5b96803c, type: 3}
